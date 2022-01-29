@@ -27,7 +27,7 @@ namespace MoonUI
             else
                 e.Graphics.FillRectangle(new SolidBrush(MoonManager.BackAccentColor), r); //e.Bounds
 
-            TextRenderer.DrawText(e.Graphics, e.Node.Text, e.Node.TreeView.Font, e.Node.Bounds, MoonManager.TextColor);
+            TextRenderer.DrawText(e.Graphics, e.Node.Text, this.Font, e.Node.Bounds, MoonManager.TextColor);
 
             if (this.ImageList != null && this.ImageList.Images.Count > 0 && e.Node.SelectedImageIndex > -1)
             {

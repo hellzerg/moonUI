@@ -33,6 +33,10 @@ namespace Demo
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" +
+        "aaaaaaaaaaaaa");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Node0", new System.Windows.Forms.TreeNode[] {
+            treeNode1});
             this.moonButton1 = new MoonUI.MoonButton();
             this.moonTextField1 = new MoonUI.MoonTextField();
             this.moonInfoButton1 = new MoonUI.MoonInfoButton();
@@ -55,6 +59,7 @@ namespace Demo
             this.moonToggle1 = new MoonUI.MoonToggle();
             this.moonTip1 = new MoonUI.MoonTip();
             this.moonCircularBar1 = new MoonUI.MoonCircularBar();
+            this.moonTree1 = new MoonUI.MoonTree();
             this.moonMenu1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moonGrid1)).BeginInit();
             this.SuspendLayout();
@@ -109,7 +114,7 @@ namespace Demo
             this.optionsToolStripMenuItem});
             this.moonMenu1.Location = new System.Drawing.Point(0, 0);
             this.moonMenu1.Name = "moonMenu1";
-            this.moonMenu1.Size = new System.Drawing.Size(705, 24);
+            this.moonMenu1.Size = new System.Drawing.Size(887, 24);
             this.moonMenu1.TabIndex = 8;
             this.moonMenu1.Text = "moonMenu1";
             // 
@@ -289,7 +294,7 @@ namespace Demo
             this.moonGrid1.DefaultCellStyle = dataGridViewCellStyle3;
             this.moonGrid1.EnableHeadersVisualStyles = false;
             this.moonGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.moonGrid1.Location = new System.Drawing.Point(177, 323);
+            this.moonGrid1.Location = new System.Drawing.Point(163, 201);
             this.moonGrid1.Name = "moonGrid1";
             this.moonGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -307,7 +312,7 @@ namespace Demo
             // 
             this.moonToggle1.AutoSize = true;
             this.moonToggle1.ForeColor = System.Drawing.Color.White;
-            this.moonToggle1.Location = new System.Drawing.Point(602, 340);
+            this.moonToggle1.Location = new System.Drawing.Point(299, 413);
             this.moonToggle1.MinimumSize = new System.Drawing.Size(46, 22);
             this.moonToggle1.Name = "moonToggle1";
             this.moonToggle1.Size = new System.Drawing.Size(46, 22);
@@ -327,7 +332,7 @@ namespace Demo
             // 
             // moonCircularBar1
             // 
-            this.moonCircularBar1.Location = new System.Drawing.Point(365, 249);
+            this.moonCircularBar1.Location = new System.Drawing.Point(163, 296);
             this.moonCircularBar1.Maximum = ((long)(100));
             this.moonCircularBar1.MinimumSize = new System.Drawing.Size(75, 75);
             this.moonCircularBar1.Name = "moonCircularBar1";
@@ -337,11 +342,30 @@ namespace Demo
             this.moonCircularBar1.Text = "moonCircularBar1";
             this.moonCircularBar1.Value = ((long)(45));
             // 
+            // moonTree1
+            // 
+            this.moonTree1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.moonTree1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.moonTree1.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
+            this.moonTree1.ForeColor = System.Drawing.Color.White;
+            this.moonTree1.Location = new System.Drawing.Point(299, 186);
+            this.moonTree1.Name = "moonTree1";
+            treeNode1.Name = "Node1";
+            treeNode1.Text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" +
+    "aaaaaaaaaaaaa";
+            treeNode2.Name = "Node0";
+            treeNode2.Text = "Node0";
+            this.moonTree1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode2});
+            this.moonTree1.Size = new System.Drawing.Size(576, 206);
+            this.moonTree1.TabIndex = 19;
+            // 
             // DemoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 438);
+            this.ClientSize = new System.Drawing.Size(887, 598);
+            this.Controls.Add(this.moonTree1);
             this.Controls.Add(this.moonCircularBar1);
             this.Controls.Add(this.moonToggle1);
             this.Controls.Add(this.moonGrid1);
@@ -390,6 +414,7 @@ namespace Demo
         private MoonUI.MoonToggle moonToggle1;
         private MoonUI.MoonTip moonTip1;
         private MoonUI.MoonCircularBar moonCircularBar1;
+        private MoonUI.MoonTree moonTree1;
     }
 }
 
