@@ -9,6 +9,7 @@ namespace Demo
         public DemoForm()
         {
             InitializeComponent();
+            MoonManager.SET_THEME(THEME.DARK, THEME_ACCENT.ZERG, this);
         }
 
         private void Form1_Load(object sender, EventArgs e)

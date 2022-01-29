@@ -117,54 +117,46 @@ namespace MoonUI
                     tmp.LinkColor = MoonManager.AccentColor;
                     tmp.VisitedLinkColor = MoonManager.SecondaryColor;
                     tmp.ActiveLinkColor = MoonManager.SecondaryColor;
-                    tmp.Invalidate();
                 }
 
                 if (x is MoonMenu || x is ContextMenuStrip || x is MoonSelect || x is MoonTextField || x is MoonList)
                 {
                     tmp.BackColor = MoonManager.BackAccentColor;
                     tmp.ForeColor = MoonManager.TextColor;
-                    tmp.Invalidate();
                 }
 
                 if (x is MoonGrid)
                 {
                     tmp.FixColors();
-                    tmp.Invalidate();
                 }
 
                 if (x is MoonTree)
                 {
                     tmp.ForeColor = MoonManager.TextColor;
                     tmp.BackColor = MoonManager.BackAccentColor;
-                    tmp.Invalidate();
                 }
 
                 if (x is TabPage)
                 {
                     tmp.BackColor = MoonManager.BackColor;
                     tmp.ForeColor = MoonManager.TextColor;
-                    tmp.Invalidate();
                 }
 
                 if (x is MoonLinearBar)
                 {
                     tmp.PaintedBack = false;
                     tmp.StopPainting = false;
-                    tmp.Invalidate();
                 }
 
                 if (x is MoonLabel)
                 {
                     tmp.ForeColor = MoonManager.AccentColor;
-                    tmp.Invalidate();
                 }
 
                 if (x is MoonCheckList)
                 {
                     tmp.ForeColor = MoonManager.TextColor;
                     tmp.BackColor = MoonManager.BackAccentColor;
-                    tmp.Invalidate();
                 }
 
                 if (x is MoonCheck || x is MoonRadio)
@@ -179,7 +171,6 @@ namespace MoonUI
                         tmp.Font = new Font(tmp.Font, FontStyle.Regular);
                         tmp.ForeColor = MoonManager.TextColor;
                     }
-                    tmp.Invalidate();
                 }
 
                 if (x is MoonButton)
@@ -188,8 +179,9 @@ namespace MoonUI
                     tmp.FlatAppearance.BorderSize = 0;
                     tmp.FlatAppearance.MouseOverBackColor = SecondaryColor;
                     tmp.FlatAppearance.MouseDownBackColor = SecondaryColor;
-                    tmp.Invalidate();
                 }
+
+                tmp.Invalidate();
             }
         }
 
