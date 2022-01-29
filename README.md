@@ -13,6 +13,7 @@ Exceptionally lightweight and very small size (40KB).
 * 2 progress bars (Circular, Linear)
 * Tooltip
 * ListBox, CheckListBox, TreeView, Grids
+* Renderer for menu strips
 
 ## Screenshots: ##
 
