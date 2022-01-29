@@ -163,6 +163,7 @@ namespace MoonUI
                 if (x is MoonCheckList)
                 {
                     tmp.ForeColor = MoonManager.TextColor;
+                    tmp.BackColor = MoonManager.BackAccentColor;
                     tmp.Invalidate();
                 }
 
