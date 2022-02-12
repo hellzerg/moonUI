@@ -20,12 +20,28 @@ namespace MoonUI
             r.Y = e.Bounds.Y;
             r.Height = e.Bounds.Height;
             r.Width = 100000;
+
             if (e.Node.IsSelected)
             {
                 e.Graphics.FillRectangle(new SolidBrush(MoonManager.BackColor), r); //e.Bounds
             }
             else
+            {
                 e.Graphics.FillRectangle(new SolidBrush(MoonManager.BackAccentColor), r); //e.Bounds
+            }
+
+            if (e.Node.Nodes.Count > 0)
+            {
+                r.X = 0;
+                e.Graphics.DrawString(e.Node.Text, this.Font, new SolidBrush(MoonManager.TextColor), r);
+                //TextRenderer.DrawText(e.Graphics, e.Node.Text, this.Font, e.Node.Bounds, MoonManager.TextColor);
+            }
+            else
+            {
+                r.X = 20;
+                e.Graphics.DrawString(e.Node.Text, this.Font, new SolidBrush(MoonManager.TextColor), r);
+                //TextRenderer.DrawText(e.Graphics, e.Node.Text, this.Font, e.Node.Bounds, MoonManager.TextColor);
+            }
 
             TextRenderer.DrawText(e.Graphics, e.Node.Text, this.Font, e.Node.Bounds, MoonManager.TextColor);
 
